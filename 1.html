@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowGem – Premium Taps & Bath Fittings</title>
+  <link rel="stylesheet" href="2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <img src="E:\web\image\FLOWGEM LOGO.png" alt="FlowGem Logo" class="logo-img" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#features">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape1"></div>
+      <div class="shape shape2"></div>
+      <div class="shape shape3"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-badge">PTMT Taps &amp; Bath Fittings</span>
+      <h1><span class="hero-mid">This</span> <strong>FLOW</strong> <span class="hero-mid">Make</span><br /><span class="hero-mid">Your Life</span> <span class="accent"><strong>GEM</strong></span></h1>
+      <p>Experience the finest bib cocks, pillar taps, wall mixers, and complete bath fittings — engineered for lasting performance and elegant design.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn btn-primary">Explore Products</a>
+        <a href="#contact" class="btn btn-outline">Get a Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>500+</strong><span>Products</span></div>
+        <div class="stat"><strong>15+</strong><span>Years Experience</span></div>
+        <div class="stat"><strong>10K+</strong><span>Happy Customers</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="E:\web\image\hero-tap.JPEG" alt="FlowGem PTMT Tap" class="hero-tap-img" />
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f0f6ff"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card">
+            <i class="fa-solid fa-gem"></i>
+            <h3><strong></strong>GEM</strong> Quality</h3>
+            <p>Every fitting crafted with precision using premium PTMT material — rust-free, lead-free, and built to last.</p>
+          </div>
+          <div class="about-card">
+            <i class="fa-solid fa-droplet"></i>
+            <h3><strong>FLOW</strong> Make Your Life <strong>GEM</strong></h3>
+            <p>Smooth water flow technology with drip-proof ceramic disc cartridges.</p>
+          </div>
+          <div class="about-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>36 Month Warranty</h3>            <p>Backed by our 36-month warranty and dedicated customer support.</p>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-badge">About FlowGem</span>
+          <h2>Crafting Excellence in Every Drop</h2>
+          <p>FlowGem is a leading manufacturer of PTMT taps and bath fittings. From simple bib cocks to designer wall mixers, every product is designed with a focus on durability, aesthetics, and water efficiency.</p>
+          <p>Our products are ISI marked, eco-friendly, and trusted by homebuilders, architects, and plumbers across India.</p>
+          <ul class="about-list">
+            <li><i class="fa-solid fa-check"></i> ISI Certified Products</li>
+            <li><i class="fa-solid fa-check"></i> Lead-Free &amp; Rust-Free PTMT</li>
+            <li><i class="fa-solid fa-check"></i> Water-Saving Technology</li>
+            <li><i class="fa-solid fa-check"></i> 500+ Product Variants</li>
+          </ul>
+          <a href="#products" class="btn btn-primary">View Our Range</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Products</span>
+        <h2>Complete Range of Fittings</h2>
+        <p>Everything you need for kitchen, bathroom, and outdoor water systems.</p>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="taps">Taps</button>
+        <button class="filter-btn" data-filter="bib">Bib Cocks</button>
+        <button class="filter-btn" data-filter="shower">Shower</button>
+        <button class="filter-btn" data-filter="mixer">Mixers</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+
+        <!-- LUDO PROMO Special Card -->
+        <div class="product-card ludo-blue-card" data-category="bib" onclick="window.open('4.html','_blank')" style="cursor:pointer;">
+          <div class="product-img">
+            <i class="fa-solid fa-faucet-drip" style="font-size:3.5rem;color:#005bea;"></i>
+          </div>
+          <div class="product-info">
+            <span class="product-tag" style="background:#e0eeff;color:#005bea;">Bib Cock</span>
+            <h3 style="color:#003fa3;font-size:1.2rem;font-weight:900;letter-spacing:-0.5px;">LUDO PROMO</h3>
+            <p>Premium bib cock series in signature Ludo PROMO. <strong>Tap to explore all 13 variants →</strong></p>
+            <div class="product-footer">
+              <span class="product-code">FG-LP-Series</span>
+              <span class="btn-small" style="background:#005bea;color:#fff;"><i class="fa-solid fa-arrow-up-right-from-square"></i> View All 13</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="bib" onclick="window.open('5.html','_blank')" style="cursor:pointer;">
+          <div class="product-img">
+            <i class="fa-solid fa-faucet"></i>
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Bib Cock</span>
+             <h3 style="color:#003fa3;font-size:1.2rem;font-weight:900;letter-spacing:-0.5px;">LUDO PRIME</h3>
+             <P>Premium bib cock series in signature Ludo PRIME. <strong>Tap to explore all 13 variants →</strong></p>
+             <div class="product-footer">
+              <span class="product-code">FG-LP-Series</span>
+              <span class="btn-small" style="background:#005bea;color:#fff;"><i class="fa-solid fa-arrow-up-right-from-square"></i> View All 13</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="taps">
+          <div class="product-img">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Pillar Tap</span>
+            <h3>Swan Neck Pillar Tap</h3>
+            <p>Elegant swan neck design for kitchen sinks. Single-hole installation, smooth operation.</p>
+            <div class="product-footer">
+              <span class="product-code">FG-PT-201</span>
+              <a href="#contact" class="btn-small">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="taps">
+          <div class="product-img">
+            <i class="fa-solid fa-sink"></i>
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Pillar Tap</span>
+            <h3>Table Mounted Tap</h3>
+            <p>Classic table-mounted pillar tap for wash basins. Available in chrome and antique brass finish.</p>
+            <div class="product-footer">
+              <span class="product-code">FG-PT-205</span>
+              <a href="#contact" class="btn-small">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="shower">
+          <div class="product-img">
+            <i class="fa-solid fa-shower"></i>
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Shower</span>
+            <h3>Rain Shower Set</h3>
+            <p>Overhead rain shower with overhead arm and wall flange. Wide spray coverage for relaxing bath.</p>
+            <div class="product-footer">
+              <span class="product-code">FG-SH-301</span>
+              <a href="#contact" class="btn-small">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="shower">
+          <div class="product-img">
+            <i class="fa-solid fa-bath"></i>
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Shower</span>
+            <h3>Hand Shower with Holder</h3>
+            <p>Flexible hose hand shower with adjustable holder. 3-function spray modes.</p>
+            <div class="product-footer">
+              <span class="product-code">FG-SH-308</span>
+              <a href="#contact" class="btn-small">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="mixer">
+          <div class="product-img">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Mixer</span>
+            <h3>Single Lever Wall Mixer</h3>
+            <p>Single-lever hot &amp; cold wall mixer with provision for overhead and hand shower. Ceramic cartridge.</p>
+            <div class="product-footer">
+              <span class="product-code">FG-MX-401</span>
+              <a href="#contact" class="btn-small">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="mixer">
+          <div class="product-img">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Mixer</span>
+            <h3>Basin Mixer Tap</h3>
+            <p>Single-hole basin mixer with pop-up waste. 360° swivel spout, hot &amp; cold water control.</p>
+            <div class="product-footer">
+              <span class="product-code">FG-MX-410</span>
+              <a href="#contact" class="btn-small">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES / WHY US ===== -->
+  <section class="features" id="features">
+    <div class="features-bg"></div>
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-badge light">Why FlowGem</span>
+        <h2>Built Different. Built Better.</h2>
+        <p>What sets our fittings apart from the rest.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-medal"></i></div>
+          <h3>ISI Certified</h3>
+          <p>All products meet Bureau of Indian Standards (BIS) certification requirements.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Eco Friendly</h3>
+          <p>Water-saving aerators reduce consumption by up to 40% without affecting flow feel.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Easy Install</h3>
+          <p>Universal fitting standards make installation simple for plumbers and DIY.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
+          <h3>Multiple Finishes</h3>
+          <p>Chrome, Antique Brass, Matte Black, Rose Gold — match any interior style.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+          <h3>Best Price</h3>
+          <p>Factory-direct pricing with no compromise on quality. Bulk dealer pricing available.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+          <h3>After-Sales Support</h3>
+          <p>Dedicated support team and easy spare parts availability across India.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Testimonials</span>
+        <h2>What Our Customers Say</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"FlowGem bib cocks have been installed in all 48 units of our housing project. Zero complaints in 2 years. Excellent quality."</p>
+          <div class="testi-author">
+            <div class="avatar">RK</div>
+            <div>
+              <strong>Rakesh Kumar</strong>
+              <span>Builder, Pune</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card featured">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"The shower sets look premium and the water pressure is perfect. My clients love them. FlowGem is now my go-to brand for all bathroom projects."</p>
+          <div class="testi-author">
+            <div class="avatar">SM</div>
+            <div>
+              <strong>Sunita Mehta</strong>
+              <span>Interior Designer, Mumbai</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+          <p>"Good pricing for dealers. The ceramic disc taps haven't had a single drip issue. Will definitely continue ordering in bulk."</p>
+          <div class="testi-author">
+            <div class="avatar">VP</div>
+            <div>
+              <strong>Vijay Patel</strong>
+              <span>Plumbing Contractor, Surat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Contact Us</span>
+        <h2>Get in Touch</h2>
+        <p>Request a catalogue, product enquiry, or dealer pricing — we're here to help.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Address</strong>
+              <span>FlowGem Industries, Industrial Area, Gujarat, India</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Phone</strong>
+              <span><a href="tel:+918306543264">+91 83065 43264</a></span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <span>info@flowgem.in</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Business Hours</strong>
+              <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="Rajesh Sharma" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+91 98765 43210" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="interest">Interested In</label>
+            <select id="interest">
+              <option value="">Select Product Category</option>
+              <option>Bib Cocks</option>
+              <option>Pillar Taps</option>
+              <option>Shower Sets</option>
+              <option>Wall Mixers</option>
+              <option>Basin Mixers</option>
+              <option>Full Bathroom Set</option>
+              <option>Dealer / Bulk Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">
+            <i class="fa-solid fa-paper-plane"></i> Send Enquiry
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fa-brands fa-whatsapp"></i> Redirected to WhatsApp! We'll reply shortly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="logo.png" alt="FlowGem Logo" class="logo-img footer-logo-img" />
+          </div>
+          <p>Premium PTMT taps and bath fittings for every home. Quality you can trust, style you'll love.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#products">Bib Cocks</a></li>
+            <li><a href="#products">Pillar Taps</a></li>
+            <li><a href="#products">Shower Sets</a></li>
+            <li><a href="#products">Wall Mixers</a></li>
+            <li><a href="#products">Basin Mixers</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#features">Why FlowGem</a></li>
+            <li><a href="#contact">Dealer Enquiry</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Catalogue Download</a></li>
+            <li><a href="#">Installation Guide</a></li>
+            <li><a href="#">Warranty Policy</a></li>
+            <li><a href="#">Spare Parts</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FlowGem Industries. All rights reserved.</p>
+        <p>Designed with <i class="fa-solid fa-heart" style="color:#ef4444"></i> for pure flow</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/918306543264" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="3.js"></script>
+</body>
+</html>
