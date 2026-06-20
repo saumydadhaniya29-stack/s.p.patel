@@ -1,0 +1,24 @@
+=============================================
+  FlowGem Website - Kaise Kholen?
+=============================================
+
+SABSE AASAN TARIKA:
+-------------------
+"START WEBSITE.bat" file par double-click karo.
+Website automatically browser mein khul jayegi.
+http://localhost:8080/1.html
+
+AGAR NAHI KHULE:
+----------------
+"START WEBSITE (Node).bat" try karo.
+
+MANUALLY KHOLNA HO TO:
+----------------------
+Seedha "1.html" file browser mein drag karo.
+
+NOTE:
+-----
+Server band karne ke liye Command Prompt mein
+Ctrl+C dabao.
+
+=============================================

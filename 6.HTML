@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLASSIC-M Series – FlowGem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; background: #f0f6ff; color: #1e293b; }
+    .lb-header {
+      background: linear-gradient(135deg, #0a1628, #1a3a6e, #1a6fc4);
+      padding: 32px 24px 48px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .lb-header::before {
+      content: ''; position: absolute;
+      width: 400px; height: 400px;
+      background: rgba(255,255,255,0.05); border-radius: 50%;
+      top: -150px; right: -100px;
+    }
+    .lb-header::after {
+      content: ''; position: absolute;
+      width: 250px; height: 250px;
+      background: rgba(255,255,255,0.04); border-radius: 50%;
+      bottom: -80px; left: -60px;
+    }
+    .back-btn {
+      position: absolute; top: 20px; left: 20px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff; padding: 8px 18px; border-radius: 50px;
+      font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background 0.3s; z-index: 10;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.22); }
+    .lb-logo { height: 48px; margin: 0 auto 16px; display: block; }
+    .lb-header h1 { color: #fff; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 900; letter-spacing: -1px; }
+    .lb-header h1 span { color: #93c5fd; }
+    .lb-header p { color: rgba(255,255,255,0.8); margin-top: 10px; font-size: 1rem; }
+    .lb-badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+    .lb-badge {
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22);
+      color: #fff; padding: 5px 16px; border-radius: 50px; font-size: 0.78rem; font-weight: 600;
+    }
+    .lb-container { max-width: 1180px; margin: 0 auto; padding: 48px 24px 64px; }
+    .lb-section-title { text-align: center; margin-bottom: 36px; }
+    .lb-section-title h2 { font-size: 1.7rem; font-weight: 800; color: #1a3a6e; }
+    .lb-section-title p { color: #64748b; margin-top: 6px; }
+    .lb-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .lb-card {
+      background: linear-gradient(135deg, #e8f1fd, #dbeafe);
+      box-shadow: 0 4px 20px rgba(26,111,196,0.10);
+      border: 1px solid #e0eeff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .lb-card:hover { transform: translateY(-8px); box-shadow: 0 12px 36px rgba(26,111,196,0.18); }
+    .lb-card-img {
+      background: #ffffff;
+      height: 260px;
+      padding: 36px 32px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .lb-prod-img { width: 100%; height: 100%; object-fit: contain; }
+    .lb-card-num {
+      position: absolute; top: 10px; left: 12px;
+      background: transparent; color: #1a6fc4;
+      font-size: 0.78rem; font-weight: 800; letter-spacing: 0.5px;
+    }
+    .lb-card-body { padding: 18px; }
+    .lb-card-body h3 { font-size: 0.98rem; font-weight: 700; color: #1a3a6e; margin-bottom: 6px; }
+    .lb-details { display: flex; flex-direction: column; gap: 3px; margin-bottom: 14px; font-size: 0.82rem; color: #475569; }
+    .lb-card-footer { display: flex; justify-content: space-between; align-items: center; }
+    .lb-price { font-size: 1.1rem; font-weight: 800; color: #1a6fc4; }
+    .lb-enquire {
+      padding: 6px 16px; background: #1a6fc4; color: #fff;
+      border-radius: 50px; font-size: 0.78rem; font-weight: 600;
+      text-decoration: none; transition: background 0.3s; cursor: pointer;
+    }
+    .lb-enquire:hover { background: #1358a0; }
+    .lb-footer { background: #0a1628; color: rgba(255,255,255,0.7); text-align: center; padding: 20px; font-size: 0.84rem; }
+    .lb-footer a { color: #93c5fd; text-decoration: none; }
+    @media (max-width: 600px) {
+      .lb-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .lb-card-img {
+      background: #ffffff;
+      height: 260px;
+      padding: 36px 32px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+      .lb-card-body { padding: 12px; }
+      .lb-card-body h3 { font-size: 0.85rem; }
+      .lb-details { font-size: 0.74rem; }
+      .lb-price { font-size: 0.95rem; }
+      .lb-enquire { padding: 5px 10px; font-size: 0.72rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="lb-header">
+  <a href="1.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
+  <img src="logo.png" alt="FlowGem" class="lb-logo" />
+  <h1>CLASSIC<span>-M</span> Series</h1>
+  <p>Premium PTMT Pillar Tap Collection — 12 Exclusive Variants</p>
+  <div class="lb-badges">
+    <span class="lb-badge"><i class="fa-solid fa-shield-halved"></i> 36 Month Warranty</span>
+    <span class="lb-badge"><i class="fa-solid fa-leaf"></i> Lead-Free PTMT</span>
+    <span class="lb-badge"><i class="fa-solid fa-medal"></i> ISI Certified</span>
+    <span class="lb-badge"><i class="fa-solid fa-droplet"></i> Water Saving</span>
+  </div>
+</div>
+
+<div class="lb-container">
+  <div class="lb-section-title">
+    <h2>All 12 Products</h2>
+    <p>Tap any product to send an enquiry directly on WhatsApp</p>
+  </div>
+  <div class="lb-grid">
+
+    <div class="lb-card" onclick="enquire('Bib Cock - CLSM-301 - ₹258')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-301</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/01.jpeg" alt="Bib Cock CLSM-301" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Bib Cock</h3>
+        <div class="lb-details">
+          <span><b>Code:</b> CLSM-301</span>
+          <span><b>S. Box:</b> 41 &nbsp;|&nbsp; <b>M. Box:</b> 246</span>
+        </div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹258/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Long Body Bib Cock - CLSM-302 - ₹286')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-302</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/02.jpeg" alt="Long Body Bib Cock CLSM-302" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Long Body Bib Cock</h3>
+        <div class="lb-details">
+          <span><b>Code:</b> CLSM-302</span>
+          <span><b>S. Box:</b> 30 &nbsp;|&nbsp; <b>M. Box:</b> 180</span>
+        </div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹286/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Angle Cock - CLSM-303 - ₹244')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-303</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/03.jpeg" alt="Angle Cock CLSM-303" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Angle Cock</h3>
+        <div class="lb-details">
+          <span><b>Code:</b> CLSM-303</span>
+          <span><b>S. Box:</b> 60 &nbsp;|&nbsp; <b>M. Box:</b> 120</span>
+        </div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹244/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Washing Machine Bib Cock - CLSM-304 - ₹438')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-304</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/04.jpeg" alt="Washing Machine Bib Cock CLSM-304" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Washing Machine Bib Cock</h3>
+        <div class="lb-details">
+          <span><b>Code:</b> CLSM-304</span>
+          <span><b>S. Box:</b> 41 &nbsp;|&nbsp; <b>M. Box:</b> 246</span>
+        </div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹438/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Nozzle Bib Cock - CLSM-305 - ₹425')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-305</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/05.jpeg" alt="Nozzle Bib Cock CLSM-305" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Nozzle Bib Cock</h3>
+        <div class="lb-details">
+          <span><b>Code:</b> CLSM-305</span>
+          <span><b>S. Box:</b> 41 &nbsp;|&nbsp; <b>M. Box:</b> 246</span>
+        </div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹425/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Pillar Cock - CLSM-306 - ₹563')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-306</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/06.jpeg" alt="Pillar Cock CLSM-306" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Pillar Cock</h3>
+        <div class="lb-details">
+          <span><b>Code:</b> CLSM-306</span>
+          <span><b>S. Box:</b> 20 &nbsp;|&nbsp; <b>M. Box:</b> 120</span>
+        </div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹563/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Two Way Bib Cock - CLSM-307 - Rs.605')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-307</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/07.jpeg" alt="Classic-M 07" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Two Way Bib Cock</h3>
+        <div class="lb-details"><span><b>Code:</b> CLSM-307</span><span><b>S. Box:</b> 14 &nbsp;|&nbsp; <b>M. Box:</b> 84</span></div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹605/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Two Way Angle Cock - CLSM-308 - Rs.605')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-308</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/08.jpeg" alt="Classic-M 08" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Two Way Angle Cock</h3>
+        <div class="lb-details"><span><b>Code:</b> CLSM-308</span><span><b>S. Box:</b> 20 &nbsp;|&nbsp; <b>M. Box:</b> 120</span></div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹605/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Sink Cock - CLSM-309 - Rs.550')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-309</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/09.PNG" alt="Classic-M 09" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Sink Cock</h3>
+        <div class="lb-details"><span><b>Code:</b> CLSM-309</span><span><b>S. Box:</b> 20 &nbsp;|&nbsp; <b>M. Box:</b> 120</span></div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹550/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Swan Neck - CLSM-310 - Rs.575')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-310</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/10.png" alt="Classic-M 010" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Swan Neck</h3>
+        <div class="lb-details"><span><b>Code:</b> CLSM-310</span><span><b>S. Box:</b> 20 &nbsp;|&nbsp; <b>M. Box:</b> 120</span></div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹575/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Wall Mixer - CLSM-311 - Rs.3000')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CLSM-311</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/11.jpeg" alt="Classic-M 011" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Wall Mixer</h3>
+        <div class="lb-details"><span><b>Code:</b> CLSM-311</span><span><b>S. Box:</b> 06 &nbsp;|&nbsp; <b>M. Box:</b> 36</span></div>
+        <div class="lb-card-footer">
+          <span class="lb-price">₹3000/-</span>
+          <a class="lb-enquire">Enquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb-card" onclick="enquire('Classic-M - CM-012')">
+      <div class="lb-card-img">
+        <span class="lb-card-num">CM-012</span>
+        <img src="image/ALL PRODUCTS/CLASSIC/12.jpeg" alt="Classic-M 012" class="lb-prod-img" />
+      </div>
+      <div class="lb-card-body">
+        <h3>Classic-M Tap 012</h3>
+        <div class="lb-details"><span><b>Code:</b> CM-012</span></div>
+        <div class="lb-card-footer">
+          <span class="lb-price">Enquire</span>
+          <a class="lb-enquire">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="lb-footer">
+  <p>&copy; 2026 FlowGem Industries. All rights reserved. | <a href="1.html">Back to Website</a></p>
+</div>
+
+<script>
+  function enquire(product) {
+    const msg = '🔵 *CLASSIC-M Series Enquiry*\n\n🚿 *Product:* ' + product + '\n\nPlease send me more details and pricing.';
+    window.open('https://wa.me/918306543264?text=' + encodeURIComponent(msg), '_blank');
+  }
+</script>
+</body>
+</html>

@@ -449,7 +449,8 @@ ul { list-style: none; }
   font-size: 3.5rem;
   color: var(--primary);
 }
-.product-info { padding: 22px; }
+.product-info { padding: 22px; 
+background: linear-gradient(135deg, var(--primary-light), #dbeafe);}
 .product-tag {
   display: inline-block;
   background: var(--primary-light);
@@ -905,4 +906,23 @@ ul { list-style: none; }
   .products-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
   .stat strong { font-size: 1.3rem; }
+}
+
+/* ===== SERIES CARD COVER IMAGE ===== */
+.series-card-img {
+  background: #ffffff;
+  height: 222px;
+  padding: 48px 40px;
+  overflow: hidden;
+}
+.series-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+.product-card:hover .series-cover-img {
+  transform: scale(1.06);
 }
